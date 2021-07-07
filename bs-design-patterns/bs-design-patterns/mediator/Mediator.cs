@@ -7,14 +7,8 @@ namespace bs_design_patterns.mediator
     abstract class Mediator
     {
         protected List<Colleague> colleagues = new List<Colleague>();
-        public T CreateColleague<T>() where T : Colleague, new()
-        {
-            var colleague = new T();
-            colleague.SetMediator(this);
-            this.colleagues.Add(colleague);
-            return colleague;
-        }
+        public abstract T CreateColleague<T>() where T : Colleague, new();
 
-        internal abstract void SendMessage(Colleague sender, string msg);
+        public abstract void SendMessage(Colleague sender, string msg);
     }
 }

@@ -16,7 +16,7 @@ namespace bs_design_patterns.mediator
             this.mediator.SendMessage(this, msg);
         }
 
-        internal void HandleNotification(string msg)
+        public virtual void Receive(string msg)
         {
             Console.WriteLine($"I got message: {msg}");
         }
