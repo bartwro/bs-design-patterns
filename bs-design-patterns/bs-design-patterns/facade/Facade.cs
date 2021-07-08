@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Facade is built on top of other services
-    /// It exposes functionality built on top of more comples classes with one method/endpoint
+    /// It exposes functionality built on top of more complex classes with one method/endpoint
     /// </summary>
     class Facade: IFacade
     {

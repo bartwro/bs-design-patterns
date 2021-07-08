@@ -2,5 +2,6 @@
 {
     interface IService2
     {
+        Dto Call(string res);
     }
 }
