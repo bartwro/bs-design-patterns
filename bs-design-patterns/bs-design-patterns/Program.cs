@@ -1,4 +1,5 @@
 ﻿using bs_design_patterns.mediator;
+using bs_design_patterns.memento;
 using bs_design_patterns.strategy;
 using System;
 
@@ -8,7 +9,7 @@ namespace bs_design_patterns
     {
         static void Main(string[] args)
         {
-            RunStrategy();
+            Context.Run();
             Console.ReadKey();
         }
 
