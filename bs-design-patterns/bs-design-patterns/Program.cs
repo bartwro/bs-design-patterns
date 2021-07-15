@@ -9,7 +9,37 @@ namespace bs_design_patterns
     {
         static void Main(string[] args)
         {
-            Context.Run();
+            var orig = new Memento.Originator();
+            var ct = new Caretaker(orig);
+            ct.ChangeOrig("1");
+            ct.ChangeOrig("2");
+            ct.ChangeOrig("3");
+            ct.ChangeOrig("4");
+            ct.ChangeOrig("5");
+            ct.ChangeOrig("6");
+            ct.ChangeOrig("7");
+            while (true)
+            {
+                var key = Console.ReadKey().Key;
+                if (key == ConsoleKey.U)
+                {
+                    ct.Undo();
+                    
+                }
+                else if(key == ConsoleKey.R)
+                {
+                    ct.Redo();
+                }
+                else if (key == ConsoleKey.Q)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Wrong key, must be u(undo), r(redo) or q(quit)");
+                }
+                Console.WriteLine($"Actual value: {orig._state}");
+            }
             Console.ReadKey();
         }
 
