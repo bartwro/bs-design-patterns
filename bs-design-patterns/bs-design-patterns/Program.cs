@@ -1,4 +1,5 @@
-﻿using bs_design_patterns.mediator;
+﻿using bs_design_patterns.flyweight;
+using bs_design_patterns.mediator;
 using bs_design_patterns.memento;
 using bs_design_patterns.strategy;
 using System;
@@ -8,6 +9,14 @@ namespace bs_design_patterns
     class Program
     {
         static void Main(string[] args)
+        {
+            //TestTasks1.Main1();
+            //MementoScenario();
+            Example.Run();
+            Console.ReadKey();
+        }
+
+        private static void MementoScenario()
         {
             var orig = new Memento.Originator();
             var ct = new Caretaker(orig);
@@ -24,9 +33,9 @@ namespace bs_design_patterns
                 if (key == ConsoleKey.U)
                 {
                     ct.Undo();
-                    
+
                 }
-                else if(key == ConsoleKey.R)
+                else if (key == ConsoleKey.R)
                 {
                     ct.Redo();
                 }
