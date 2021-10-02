@@ -12,7 +12,8 @@ namespace bs_design_patterns
         {
             //TestTasks1.Main1();
             //MementoScenario();
-            Example.Run();
+            //Example.Run();
+            FlyweightUsage.Run();
             Console.ReadKey();
         }
 
